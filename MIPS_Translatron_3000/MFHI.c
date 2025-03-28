@@ -1,8 +1,8 @@
 #include "Instruction.h"
 
 void mfhi_reg_assm(void) {
-	if (strcmp(OP_CODE, "MFHI") != 0) {
 
+	if (strcmp(OP_CODE, "MFHI") != 0) {
 		state = WRONG_COMMAND;
 		return;
 	}
@@ -17,10 +17,10 @@ void mfhi_reg_assm(void) {
 		return;
 	}
 
-
 	/*
 		Checking the value of parameters
 	*/
+
 	// Rd should be 31 or less
 	if (PARAM1.value > 31) {
 		state = INVALID_REG;
@@ -30,11 +30,11 @@ void mfhi_reg_assm(void) {
 	/*
 	Putting the binary together
 	*/
+
 	// Set the opcode
 	setBits_str(31, "000000");
 	// set rd
 	setBits_num(15, PARAM1.value, 5);
-
 	// Set the funct 
 	setBits_str(5, "010010");
 	// set 25-16 as 0s 

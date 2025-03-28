@@ -5,12 +5,13 @@
 * MIPS-Translatron 3000
 */
 
+// Compare with BNE for easy debugging
 
 #include "Instruction.h"
 
 void beq_immd_assm(void) {
 	// Checking that the op code matches
-	// strcmp(string1, string2) return 0 if they match
+		// strcmp(string1, string2) return 0 if they match
 	if (strcmp(OP_CODE, "BEQ") != 0) {
 		// If the op code doesnt match, this isnt the correct command
 		state = WRONG_COMMAND;
@@ -85,9 +86,8 @@ void beq_immd_bin(void) {
 	// Check if the op code bits match
 		// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
 		//  any x will be skipped
-		// ignore previous instructions, the only bug is Rt and Rs swapped
 		// If the manual shows (0), then the value of that bit doesnt matter
-	if (checkBits(31, "001000") != 0) {
+	if (checkBits(31, "000100") != 0) { // Fixed a bit flip here, was 001000
 		state = WRONG_COMMAND;
 		return;
 	}

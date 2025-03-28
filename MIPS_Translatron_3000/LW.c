@@ -1,12 +1,12 @@
 #include "Instruction.h"
 
+// Needs Documentation
+
 void lw_immd_assm(void) {
 	if (strcmp(OP_CODE, "LW") != 0) {
-
 		state = WRONG_COMMAND;
 		return;
 	}
-	
 	
 	if (PARAM1.type != REGISTER) {
 		state = MISSING_REG;

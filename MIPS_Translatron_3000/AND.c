@@ -1,3 +1,5 @@
+// Compare with ADD for easy debugging
+
 #include "Instruction.h"
 
 void and_reg_assm(void) {
