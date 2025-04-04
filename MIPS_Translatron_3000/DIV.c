@@ -91,8 +91,8 @@ void div_reg_bin(void) {
 	setOp("DIV");
 	//setCond_num(cond);
 	//setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rt); // destination
-	setParam(2, REGISTER, Rs); // source register operand
+	setParam(1, REGISTER, Rs); // destination
+	setParam(2, REGISTER, Rt); // source register operand
 
 	// tell the system the decoding is done
 	state = COMPLETE_DECODE;
@@ -103,11 +103,11 @@ void div_reg_bin(void) {
 /*
 	Enter Binary:
 	> 000000 01000 01110 00000 00000 011010 
-	DIV $t6, $t0
+	DIV $t0, $t6
 */
 
 /*
 	Enter a line of assembly:
-	> DIV $t6, $t0
-	000000 01110 01000 00000 00000 011010
+	> DIV $t0, $t6
+	000000 01000 01110 00000 00000 011010
 */
