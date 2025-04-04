@@ -31,15 +31,19 @@ void mflo_reg_assm(void) {
 	/*
 	Putting the binary together
 	*/
+
 	// Set the opcode
 	setBits_str(31, "000000");
+	
+	// Set the funct 
+	setBits_str(5, "010000");
+
 	// set rd
 	setBits_num(15, PARAM1.value, 5);
 
-	// Set the funct 
-	setBits_str(5, "010000");
 	// set 25-16 as 0s 
-	setBits_str(10, "000000");
+	setBits_str(25, "00000");
+	setBits_str(20, "00000");
 
 	// set 10-6 as 0s 
 	setBits_str(10, "00000");
@@ -69,6 +73,7 @@ void mflo_reg_bin(void) {
 	/*
 		Setting Instuciton values
 	*/
+
 	setOp("MFLO");
 	//setParam(param_num, param_type, param_value)
 	setParam(1, REGISTER, Rd); //destination
