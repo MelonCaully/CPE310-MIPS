@@ -6,9 +6,9 @@ Needs Debbuged
 
 - BEQ.c
 
-- MFHI.c (Needs minor documentation)     (Malone)
+- MFHI.c (Needs minor documentation)     (Malone) Done
 
-- MFLO.c (Needs minor documentation)     (Malone)
+- MFLO.c (Needs minor documentation)     (Malone) Done
 
 - SUB.c          
 
@@ -16,7 +16,7 @@ Needs Documentation and Debugged
 
 - ANDI.c
 
-- DIV.c          (Malone)
+- DIV.c          (Malone) Done
 
 - LUI.c
 
@@ -30,7 +30,7 @@ Needs Documentation and Debugged
 
 Needs Implemented
 
-- MULT.c         (Malone)
+- MULT.c         (Malone) Done
 
 - ORI.c
 
