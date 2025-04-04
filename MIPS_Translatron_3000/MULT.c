@@ -90,10 +90,21 @@ void mult_reg_bin(void) {
 	setOp("MULT");
 	//setCond_num(cond);
 	//setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rt); // destination
-	setParam(2, REGISTER, Rs); // source register operand
+	setParam(1, REGISTER, Rs); // destination
+	setParam(2, REGISTER, Rt); // source register operand
 
 	// tell the system the encoding is done
 	state = COMPLETE_DECODE;
 }
 
+/*
+	Enter Binary:
+	> 000000 01001 01010 00000 00000 011000
+	MULT $t1, $t2
+*/
+
+/*
+	Enter a line of assembly:
+	> MULT $t1, $t2
+	000000 01001 01010 00000 00000 011000 
+*/
