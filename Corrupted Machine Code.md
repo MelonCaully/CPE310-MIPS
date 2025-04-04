@@ -16,9 +16,9 @@ Below is the machine code where there is a single bit flip in the following fiel
 
 00000001110010000000000000011010                               DIV $t0, $t6
 
-00000000000000100111100000010000	\-\>	Rt field           ERROR
+00000000000000'1'00111100000010000	\-\>	Rt field           ERROR \-\> MFLO $t7
 
-00000000000000001100000000010010                               MFHI $t8
+0000000000000000'1'100000000010010                             MFHI $t8 \-\> MFHI $t0
 
 00000001001010100000000000011000                               ERROR
 

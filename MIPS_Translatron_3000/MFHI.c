@@ -85,4 +85,14 @@ void mfhi_reg_bin(void) {
 	state = COMPLETE_DECODE;
 }
 
+/*
+	Enter Binary:
+	> 000000 00000 00000 11000 00000 010010
+	MFHI $t8
+*/
 
+/*
+	Enter a line of assembly:
+	> MFHI $t8
+	000000 00000 00000 11000 00000 010010 
+*/

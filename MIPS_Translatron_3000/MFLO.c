@@ -84,4 +84,14 @@ void mflo_reg_bin(void) {
 	
 }
 
+/*
+	Enter Binary:
+	> 000000 00000 00000 01111 00000 010000
+	MFLO $t7
+*/
 
+/*
+Enter a line of assembly:
+> MFLO $t7
+000000 00000 00000 01111 00000 010000
+*/
