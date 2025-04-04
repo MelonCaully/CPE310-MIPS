@@ -39,3 +39,5 @@ Below is the machine code where there is a single bit flip in the following fiel
 10001110111101010000000000000100	\-\>	opcode field       LW $s5, #0x4($s7)
 
 00111100000101100001001000110100                               LUI $s6, $zero, #0x1234
+
+Resource on Machine Instructions: <https://learn.zybooks.com/zybook/WVUCPE310HefeidaSpring2025/chapter/3/section/5?content_resource_id=56179112>
