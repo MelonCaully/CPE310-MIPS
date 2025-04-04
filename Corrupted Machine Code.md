@@ -2,7 +2,7 @@
 
 Below is the machine code where there is a single bit flip in the following fields
 
-00000001001010100101000000100000	\-\>	Rd field           ADD $t2, $t1, $t2
+000000 01001 01010 01010 00000 100000	\-\>	Rd field       ADD $t2, $t1, $t2
 
 00100001000010110000000000000101                               ADDI $t3, $t0, #0x5
 
@@ -14,13 +14,13 @@ Below is the machine code where there is a single bit flip in the following fiel
 
 00010101011011010000000000110100                               BNE $t5, $t3, #0x34
 
-00000001110010000000000000011010                               DIV $t0, $t6
+000000 01110 01000 00000 00000 011010                               DIV $t0, $t6
 
-00000000000000'1'00111100000010000	\-\>	Rt field           ERROR \-\> MFLO $t7
+000000 00000 000'1'0 01111 00000 010000	\-\>	Rt field       ERROR \-\> MFLO $t7
 
-0000000000000000'1'100000000010010                             MFHI $t8 \-\> MFHI $t0
+000000 00000 00000 11000 00000 010010                          MFHI $t8
 
-00000001001010100000000000011000                               ERROR
+000000 01001 01010 00000 00000 011000                          MULT $t1, $t2
 
 00000001011011001100100000100001	\-\>	Funct field        ERROR
 
