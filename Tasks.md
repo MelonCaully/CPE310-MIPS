@@ -20,7 +20,7 @@ Needs Documentation and Debugged
 
 - LUI.c         (Ethan) Done, but ask Hefeida if 3 params is right
 
-- LW.c          (Malone) 
+- LW.c          (Malone) Done
 
 - OR.c
 

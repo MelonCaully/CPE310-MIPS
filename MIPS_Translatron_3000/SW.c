@@ -62,7 +62,7 @@ void sw_immd_assm(void) {
 	}
 
 	// ERROR FIX: Paremters were in the wrong order, changed to match the correct order of Rs, Rt, and offsetQ
-	// sety opcode
+	// set opcode
 	setBits_str(31, "101011");
 
 	// set rs
