@@ -1,3 +1,11 @@
+/*
+* Author: Ol' Jim
+* Debugging/Documentation: Malone Ingham
+* Date: 06/13/2012
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
 #include "Instruction.h"
 
 void mflo_reg_assm(void) {
@@ -42,6 +50,7 @@ void mflo_reg_assm(void) {
 	setBits_num(15, PARAM1.value, 5);
 
 	// set 25-16 as 0s 
+	// ERROR FIX: Was previously 10 - 5 as 0s but should be 25 - 16 as 0s
 	setBits_str(25, "00000");
 	setBits_str(20, "00000");
 
@@ -70,6 +79,7 @@ void mflo_reg_bin(void) {
 
 	// getBits(start_bit, width)
 	uint32_t Rd = getBits(15, 5);
+
 	/*
 		Setting Instuciton values
 	*/
@@ -91,7 +101,7 @@ void mflo_reg_bin(void) {
 */
 
 /*
-Enter a line of assembly:
-> MFLO $t7
-000000 00000 00000 01111 00000 010000
+	Enter a line of assembly:
+	> MFLO $t7
+	000000 00000 00000 01111 00000 010000
 */

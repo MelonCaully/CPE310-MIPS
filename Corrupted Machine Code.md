@@ -14,7 +14,7 @@ Below is the machine code where there is a single bit flip in the following fiel
 
 00010101011011010000000000110100                               BNE $t5, $t3, #0x34
 
-000000 01110 01000 00000 00000 011010                               DIV $t0, $t6
+000000 01110 01000 00000 00000 011010                          DIV $t0, $t6
 
 000000 00000 000'1'0 01111 00000 010000	\-\>	Rt field       ERROR \-\> MFLO $t7
 

@@ -1,6 +1,11 @@
-#include "Instruction.h"
+/*
+* Author: Malone Ingham
+* Date: 04/4/2025
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
 
-// will do later
+#include "Instruction.h"
 
 void mult_reg_assm(void) {
 	// Checking that the op code matches

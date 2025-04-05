@@ -1,3 +1,11 @@
+/*
+* Author: Ol' Jim
+* Debugging/Documentation: Malone Ingham
+* Date: 06/13/2012
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
 #include "Instruction.h"
 
 void mfhi_reg_assm(void) {
@@ -43,6 +51,7 @@ void mfhi_reg_assm(void) {
 	setBits_num(15, PARAM1.value, 5);
 
 	// set 25-16 as 0s 
+	//ERROR FIX: Was previously set to "000000", but should be "00000"
 	setBits_str(20, "00000");
 	setBits_str(25, "00000");
 
