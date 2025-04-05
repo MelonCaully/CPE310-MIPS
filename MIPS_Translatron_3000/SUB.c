@@ -1,5 +1,6 @@
 /*
 * Author: Ol' Jim
+* Editor: Ethan Sitler
 * Date: 06/13/2012
 * ByteForge Systems
 * MIPS-Translatron 3000
@@ -73,14 +74,14 @@ void sub_reg_assm(void) {
 	// Set the funct 
 	setBits_str(5, "100010");
 
-	// set Rd
-	setBits_num(15, PARAM1.value, 5);
-
 	// set Rs
 	setBits_num(25, PARAM2.value, 5);
 
 	// set Rt
 	setBits_num(20, PARAM3.value, 5);
+
+	// set Rd
+	setBits_num(15, PARAM1.value, 5);
 
 	// tell the system the encoding is done
 	state = COMPLETE_ENCODE;
@@ -91,7 +92,7 @@ void sub_reg_bin(void) {
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
 	// any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
-	// ERROR FIX: Original code checked for function code 100100, which specifies AND.  
+	// ERROR FIX: Original code checked for function code 100100, which specifies AND. 100010 is for SUB  
 	if (checkBits(31, "000000") != 0 || checkBits(5, "100010") != 0 ) {
 		state = WRONG_COMMAND;
 		return;
@@ -103,10 +104,9 @@ void sub_reg_bin(void) {
 		Finding values in the binary
 	*/
 	// getBits(start_bit, width)
-	uint32_t Rd = getBits(15, 5);
 	uint32_t Rs = getBits(25, 5);
 	uint32_t Rt = getBits(20, 5);	
-
+	uint32_t Rd = getBits(15, 5);
 	/*
 		Setting Instuciton values
 	*/

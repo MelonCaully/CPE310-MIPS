@@ -1,4 +1,3 @@
-#include "Instruction.h"
 /*
 * Author: Ol' Jim
 * Editor: Ethan Sitler
@@ -6,7 +5,7 @@
 * ByteForge Systems
 * MIPS-Translatron 3000
 */
-
+#include "Instruction.h"
 
 void and_reg_assm(void) {
 	// Checking that the op code matches

@@ -10,7 +10,7 @@ Needs Debbuged
 
 - MFLO.c (Needs minor documentation)     (Malone) Done
 
-- SUB.c          
+- SUB.c         (Ethan)
 
 Needs Documentation and Debugged
 
