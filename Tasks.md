@@ -2,7 +2,7 @@ What needs fixed?
 
 Needs Debbuged
 
-- AND.c         (Ethan)
+- AND.c         (Ethan) Done
 
 - BEQ.c
 
@@ -10,11 +10,11 @@ Needs Debbuged
 
 - MFLO.c (Needs minor documentation)     (Malone) Done
 
-- SUB.c         (Ethan)
+- SUB.c         (Ethan) Done
 
 Needs Documentation and Debugged
 
-- ANDI.c        (Ethan)
+- ANDI.c        (Ethan) Done
 
 - DIV.c          (Malone) Done
 
