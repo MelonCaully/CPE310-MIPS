@@ -18,7 +18,7 @@ Needs Documentation and Debugged
 
 - DIV.c          (Malone) Done
 
-- LUI.c
+- LUI.c         (Ethan) Done, but ask Hefeida if 3 params is right
 
 - LW.c
 

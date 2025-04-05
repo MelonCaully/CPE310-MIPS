@@ -1,6 +1,6 @@
 /*
 * Author: Ol' Jim
-* Debugging/Documentation: Ethan Sitler
+* Debugging/Documentation: Ethan
 * Date: 06/13/2012
 * ByteForge Systems
 * MIPS-Translatron 3000
@@ -50,8 +50,9 @@ void lui_immd_assm(void) {
 		return;
 	}
 
-	// Rs should be 31 or less
-	if (PARAM2.value > 31) {
+	// Rs should be register $zero, a.k.a. value 0
+	//ERROR FIX: Previously accepted any register. Only $zero is accepted.
+	if (PARAM2.value != 0) {
 		state = INVALID_REG;
 		return;
 	}
