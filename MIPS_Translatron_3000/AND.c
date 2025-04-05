@@ -1,4 +1,12 @@
 #include "Instruction.h"
+/*
+* Author: Ol' Jim
+* Editor: Ethan Sitler
+* Date: 06/13/2012
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
 
 void and_reg_assm(void) {
 	// Checking that the op code matches
@@ -66,14 +74,15 @@ void and_reg_assm(void) {
 	// Set the funct 
 	setBits_str(5, "100100");
 
-	// set Rd
-	setBits_num(25, PARAM1.value, 5);
-
+	// ERROR FIX: Original code set Rd before Rs. The operands should be first, then Rd
 	// set Rs
-	setBits_num(15, PARAM2.value, 5);
+	setBits_num(25, PARAM2.value, 5);
 
 	// set Rt
 	setBits_num(20, PARAM3.value, 5);
+
+	// set Rd
+	setBits_num(15, PARAM1.value, 5);
 
 	// tell the system the encoding is done
 	state = COMPLETE_ENCODE;
@@ -101,7 +110,7 @@ void and_reg_bin(void) {
 
 
 	/*
-		Setting Instuciton values
+		Setting Instruction values
 	*/
 
 	setOp("AND");
@@ -109,6 +118,7 @@ void and_reg_bin(void) {
 	//setParam(param_num, param_type, param_value)
 	setParam(1, REGISTER, Rd); //destination
 	setParam(2, REGISTER, Rs); //first source register operand
+	
 	setParam(3, REGISTER, Rt); //second source register operand
 
 

@@ -2,7 +2,7 @@ What needs fixed?
 
 Needs Debbuged
 
-- AND.c
+- AND.c         (Ethan)
 
 - BEQ.c
 
@@ -14,7 +14,7 @@ Needs Debbuged
 
 Needs Documentation and Debugged
 
-- ANDI.c
+- ANDI.c        (Ethan)
 
 - DIV.c          (Malone) Done
 
