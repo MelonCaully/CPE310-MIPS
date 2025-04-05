@@ -84,9 +84,9 @@ void bne_immd_assm(void) {
 
 void bne_immd_bin(void) {
 	// Check if the op code bits match
-			// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
-			//  any x will be skipped
-			// If the manual shows (0), then the value of that bit doesnt matter
+	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
+	// any x will be skipped
+	// If the manual shows (0), then the value of that bit doesnt matter
 	if (checkBits(31, "000101") != 0) {
 		state = WRONG_COMMAND;
 		return;
@@ -97,6 +97,7 @@ void bne_immd_bin(void) {
 	/*
 		Finding values in the binary
 	*/
+
 	// getBits(start_bit, width)
 	uint32_t Rs = getBits(25, 5);
 	uint32_t Rt = getBits(20, 5);
@@ -107,8 +108,8 @@ void bne_immd_bin(void) {
 	*/
 
 	setOp("BNE");
-	//setCond_num(cond);
-	//setParam(param_num, param_type, param_value)
+	// setCond_num(cond);
+	// setParam(param_num, param_type, param_value)
 	setParam(1, REGISTER, Rt); // destination
 	setParam(2, REGISTER, Rs); // source register operand
 	setParam(3, IMMEDIATE, offset); // immediate operand

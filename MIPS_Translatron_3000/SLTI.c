@@ -5,8 +5,6 @@
 * MIPS-Translatron 3000
 */
 
-// give this to the intern
-
 #include "Instruction.h"
 
 void slti_immd_assm(void) {
@@ -67,7 +65,6 @@ void slti_immd_assm(void) {
 	// Set the opcode
 	setBits_str(31, "001010");
 
-
 	// set Rt
 	setBits_num(20, PARAM1.value, 5);
 
@@ -84,7 +81,7 @@ void slti_immd_assm(void) {
 void slti_immd_bin(void) {
 	// Check if the op code bits match
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
-	//  any x will be skipped
+	// any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
 	if (checkBits(31, "001010") != 0) {
 		state = WRONG_COMMAND;
@@ -106,11 +103,11 @@ void slti_immd_bin(void) {
 	*/
 
 	setOp("SLTI");
-	//setCond_num(cond);
-	//setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rt); //destination
-	setParam(2, REGISTER, Rs); //first source register operand
-	setParam(3, IMMEDIATE, imm16); //second source register operand
+	// setCond_num(cond);
+	// setParam(param_num, param_type, param_value)
+	setParam(1, REGISTER, Rt); // destination
+	setParam(2, REGISTER, Rs); // first source register operand
+	setParam(3, IMMEDIATE, imm16); // second source register operand
 
 
 	// tell the system the decoding is done

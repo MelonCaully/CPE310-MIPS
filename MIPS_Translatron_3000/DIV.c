@@ -74,7 +74,7 @@ void div_reg_assm(void) {
 void div_reg_bin(void) {
 	// Check if the op code bits match
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
-	//  any x will be skipped
+	// any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
 	if (checkBits(31, "000000") != 0 || checkBits(5, "011010") != 0) {
 		state = WRONG_COMMAND;
@@ -92,9 +92,9 @@ void div_reg_bin(void) {
 	uint32_t Rt = getBits(20, 5);
 
 	setOp("DIV");
-	//setCond_num(cond);
-	//setParam(param_num, param_type, param_value)
-	//ERROR FIX: Registers were originilly swapped. Rs is now the destination register and Rt is the source register.
+	// setCond_num(cond);
+	// setParam(param_num, param_type, param_value)
+	// ERROR FIX: Registers were originilly swapped. Rs is now the destination register and Rt is the source register.
 	setParam(1, REGISTER, Rs); // destination
 	setParam(2, REGISTER, Rt); // source register operand
 

@@ -38,7 +38,6 @@ void addi_immd_assm(void) {
 		return;
 	}
 
-
 	/*
 		Checking the value of parameters
 	*/
@@ -85,7 +84,7 @@ void addi_immd_assm(void) {
 void addi_immd_bin(void) {
 	// Check if the op code bits match
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
-	//  any x will be skipped
+	// any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
 	if (checkBits(31, "001000") != 0) {
 		state = WRONG_COMMAND;
@@ -97,6 +96,7 @@ void addi_immd_bin(void) {
 	/*
 		Finding values in the binary
 	*/
+
 	// getBits(start_bit, width)
 	uint32_t Rs = getBits(25, 5);
 	uint32_t Rt = getBits(20, 5);
@@ -108,12 +108,11 @@ void addi_immd_bin(void) {
 	*/
 
 	setOp("ADDI");
-	//setCond_num(cond);
-	//setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rt); //destination
-	setParam(2, REGISTER, Rs); //first source register operand
-	setParam(3, IMMEDIATE, imm16); //second source register operand
-
+	// setCond_num(cond);
+	// setParam(param_num, param_type, param_value)
+	setParam(1, REGISTER, Rt); // destination
+	setParam(2, REGISTER, Rs); // first source register operand
+	setParam(3, IMMEDIATE, imm16); // second source register operand
 
 	// tell the system the decoding is done
 	state = COMPLETE_DECODE;

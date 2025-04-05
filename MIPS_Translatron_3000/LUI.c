@@ -51,7 +51,7 @@ void lui_immd_assm(void) {
 	}
 
 	// Rs should be register $zero, a.k.a. value 0
-	//ERROR FIX: Previously accepted any register. Only $zero is accepted.
+	// ERROR FIX: Previously accepted any register. Only $zero is accepted.
 	if (PARAM2.value != 0) {
 		state = INVALID_REG;
 		return;
@@ -107,8 +107,8 @@ void lui_immd_bin(void) {
 		Setting Instuciton values
 	*/
 	setOp("LUI");
-	//setCond_num(cond);
-	//setParam(param_num, param_type, param_value)
+	// setCond_num(cond);
+	// setParam(param_num, param_type, param_value)
 	setParam(1, REGISTER, Rt); // destination
 	setParam(2, REGISTER, Rs); // source register operand ($zero expected)
 	setParam(3, IMMEDIATE, imm16); // immediate operand

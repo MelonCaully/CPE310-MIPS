@@ -38,7 +38,7 @@ void mfhi_reg_assm(void) {
 	}
 
 	/*
-	Putting the binary together
+		Putting the binary together
 	*/
 
 	// Set the opcode
@@ -51,7 +51,7 @@ void mfhi_reg_assm(void) {
 	setBits_num(15, PARAM1.value, 5);
 
 	// set 25-16 as 0s 
-	//ERROR FIX: Was previously set to "000000", but should be "00000"
+	// ERROR FIX: Was previously set to "000000", but should be "00000"
 	setBits_str(20, "00000");
 	setBits_str(25, "00000");
 
@@ -65,7 +65,7 @@ void mfhi_reg_assm(void) {
 void mfhi_reg_bin(void) {
 	// Check if the op code bits match
 	// check_bits(start_bit, bit_string) returns 0 if the bit_string matches
-	//  any x will be skipped
+	// any x will be skipped
 	// If the manual shows (0), then the value of that bit doesnt matter
 	if (checkBits(31, "000000") != 0 || checkBits(5, "010010") != 0 || checkBits(25, "0000000000") != 0 || checkBits(10, "00000") != 0) {
 		state = WRONG_COMMAND;
@@ -86,8 +86,8 @@ void mfhi_reg_bin(void) {
 	*/
 
 	setOp("MFHI");
-	//setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rd); //destination
+	// setParam(param_num, param_type, param_value)
+	setParam(1, REGISTER, Rd); // destination
 
 
 	// tell the system the decoding is done
