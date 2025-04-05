@@ -1,5 +1,6 @@
 /*
 * Author: Ol' Jim
+* Debugging/Documentation: Malone Ingham
 * Date: 06/13/2012
 * ByteForge Systems
 * MIPS-Translatron 3000
@@ -63,6 +64,8 @@ void div_reg_assm(void) {
 
 	// set rt
 	setBits_num(20, PARAM2.value, 5);
+
+	//setBits_num(15, 0, 10);
 	
 	// tell the system the encoding is done
 	state = COMPLETE_ENCODE;
@@ -91,6 +94,7 @@ void div_reg_bin(void) {
 	setOp("DIV");
 	//setCond_num(cond);
 	//setParam(param_num, param_type, param_value)
+	//ERROR FIX: Registers were originilly swapped. Rs is now the destination register and Rt is the source register.
 	setParam(1, REGISTER, Rs); // destination
 	setParam(2, REGISTER, Rt); // source register operand
 
