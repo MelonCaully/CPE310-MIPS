@@ -4,7 +4,7 @@ Needs Debbuged
 
 - AND.c         (Ethan) Done
 
-- BEQ.c
+- BEQ.c         (Omar) Done
 
 - MFHI.c (Needs minor documentation)     (Malone) Done
 
@@ -16,17 +16,17 @@ Needs Documentation and Debugged
 
 - ANDI.c        (Ethan) Done
 
-- DIV.c          (Malone) Done
+- DIV.c         (Malone) Done
 
 - LUI.c         (Ethan) Done, but ask Hefeida if 3 params is right
 
-- LW.c
+- LW.c          (Malone) 
 
 - OR.c
 
 - SLT.c
 
-- SW.c
+- SW.c          (Malone) 
 
 Needs Implemented
 

@@ -102,6 +102,8 @@ void mult_reg_bin(void) {
 	state = COMPLETE_DECODE;
 }
 
+// Results
+
 /*
 	Enter Binary:
 	> 000000 01001 01010 00000 00000 011000

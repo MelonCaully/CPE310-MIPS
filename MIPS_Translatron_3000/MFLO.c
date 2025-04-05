@@ -94,6 +94,8 @@ void mflo_reg_bin(void) {
 	
 }
 
+// Results
+
 /*
 	Enter Binary:
 	> 000000 00000 00000 01111 00000 010000

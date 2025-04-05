@@ -102,7 +102,7 @@ void div_reg_bin(void) {
 	state = COMPLETE_DECODE;
 }
 
-// Needs Fixing
+// Results
 
 /*
 	Enter Binary:

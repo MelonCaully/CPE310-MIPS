@@ -10,7 +10,7 @@ Below is the machine code where there is a single bit flip in the following fiel
 
 00110001110011010000000000001111	\-\>	Rs field           ANDI $t5, $t6, #0xF
 
-00010001101000000000000000110100                               ERROR
+00010001101000000000000000110100                               BEQ $zero, $t5, #0x34
 
 00010101011011010000000000110100                               BNE $t5, $t3, #0x34
 

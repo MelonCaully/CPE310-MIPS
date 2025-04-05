@@ -94,6 +94,8 @@ void mfhi_reg_bin(void) {
 	state = COMPLETE_DECODE;
 }
 
+// Results
+
 /*
 	Enter Binary:
 	> 000000 00000 00000 11000 00000 010010
