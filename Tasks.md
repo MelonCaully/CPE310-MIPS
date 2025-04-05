@@ -24,7 +24,7 @@ Needs Documentation and Debugged
 
 - OR.c
 
-- SLT.c
+- SLT.c         (Ethan) Done
 
 - SW.c
 
@@ -34,4 +34,4 @@ Needs Implemented
 
 - ORI.c
 
-- SLTI.c
+- SLTI.c        (Ethan) Done
