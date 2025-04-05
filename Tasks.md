@@ -26,7 +26,7 @@ Needs Documentation and Debugged
 
 - SLT.c         (Ethan) Done
 
-- SW.c          (Malone) 
+- SW.c          (Malone) Done
 
 Needs Implemented
 
