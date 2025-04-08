@@ -1,3 +1,11 @@
+/*
+* Author: Ol' Jim
+* Editor: Malone Ingham
+* Date: 06/13/2012
+* ByteForge Systems
+* MIPS-Translatron 3000
+*/
+
 #include "Instruction.h"
 
 void lw_immd_assm(void) {

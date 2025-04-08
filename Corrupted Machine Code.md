@@ -2,7 +2,7 @@
 
 <pre>Below is the machine code where there is a single bit flip in the following fields
 
-000000 01001 01010 01010 00000 100000	-->	Rd field       ADD $t2, $t1, $t2
+000000 01001 01010 010'1'0 00000 100000	                       ADD $t2, $t1, $t2 --> ADD $t0, $t1, $t2
 
 001000 01000 01011 0000000000000101                            ADDI $t3, $t0, #0x5
 
@@ -22,7 +22,7 @@
 
 000000 01001 01010 00000 00000 011000                          MULT $t1, $t2
 
-00000001011011001100100000100001	-->	Funct field    ERROR
+000000 01011 01100 11001 00000 100001	-->	Funct field    ERROR
 
 00110111001100000000000011111111                               ERROR
 
