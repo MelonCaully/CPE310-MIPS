@@ -60,10 +60,10 @@ void div_reg_assm(void) {
 	setBits_str(5, "011010");
 
 	// set rs
-	setBits_num(25, PARAM1.value, 5);
+	setBits_num(20, PARAM1.value, 5);
 
 	// set rt
-	setBits_num(20, PARAM2.value, 5);
+	setBits_num(25, PARAM2.value, 5);
 
 	//setBits_num(15, 0, 10);
 	
@@ -88,8 +88,8 @@ void div_reg_bin(void) {
 	*/
 
 	// getBits(start_bit, width)
-	uint32_t Rs = getBits(25, 5);
-	uint32_t Rt = getBits(20, 5);
+	uint32_t Rs = getBits(20, 5);
+	uint32_t Rt = getBits(25, 5);
 
 	setOp("DIV");
 	// setCond_num(cond);

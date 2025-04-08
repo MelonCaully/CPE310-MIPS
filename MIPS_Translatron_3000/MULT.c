@@ -59,10 +59,10 @@ void mult_reg_assm(void) {
 	setBits_str(5, "011000");
 
 	// set rs
-	setBits_num(25, PARAM1.value, 5);
+	setBits_num(20, PARAM1.value, 5);
 
 	// set rt
-	setBits_num(20, PARAM2.value, 5);
+	setBits_num(25, PARAM2.value, 5);
 
 	// tell the system the encoding is done
 	state = COMPLETE_ENCODE;
@@ -85,8 +85,8 @@ void mult_reg_bin(void) {
 	*/
 
 	// getBits(start_bit, width)
-	uint32_t Rs = getBits(25, 5);
-	uint32_t Rt = getBits(20, 5);
+	uint32_t Rs = getBits(20, 5);
+	uint32_t Rt = getBits(25, 5);
 
 	/* 
 		Setting Instuciton values
