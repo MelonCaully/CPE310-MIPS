@@ -61,6 +61,10 @@ void or_reg_assm(void) {
 		return;
 	}
 
+	/*
+		Putting the binary together
+	*/
+
 	// set opcode
 	setBits_num(31, 0, 6);
 

@@ -22,7 +22,7 @@ Needs Documentation and Debugged
 
 - LW.c          (Malone) Done
 
-- OR.c
+- OR.c          (Omar) Done
 
 - SLT.c         (Ethan) Done
 
@@ -30,8 +30,8 @@ Needs Documentation and Debugged
 
 Needs Implemented
 
-- MULT.c         (Malone) Done
+- MULT.c        (Malone) Done
 
-- ORI.c
+- ORI.c         (Malone) Done
 
 - SLTI.c        (Ethan) Done
