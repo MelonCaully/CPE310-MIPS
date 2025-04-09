@@ -1,6 +1,6 @@
 /*
 * Author: Ol' Jim
-* Editor:
+* Editor: Omar
 * Date: 06/13/2012
 * ByteForge Systems
 * MIPS-Translatron 3000

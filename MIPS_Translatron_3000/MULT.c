@@ -107,11 +107,11 @@ void mult_reg_bin(void) {
 /*
 	Enter Binary:
 	> 000000 01001 01010 00000 00000 011000
-	MULT $t1, $t2
+	MULT $t2, $t1
 */
 
 /*
 	Enter a line of assembly:
-	> MULT $t1, $t2
+	> MULT $t2, $t1
 	000000 01001 01010 00000 00000 011000 
 */
