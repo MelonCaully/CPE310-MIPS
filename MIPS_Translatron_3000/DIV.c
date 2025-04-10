@@ -59,10 +59,10 @@ void div_reg_assm(void) {
 	// set the funct
 	setBits_str(5, "011010");
 
-	// set rs
+	// set rt
 	setBits_num(20, PARAM1.value, 5);
 
-	// set rt
+	// set rs
 	setBits_num(25, PARAM2.value, 5);
 
 	//setBits_num(15, 0, 10);
@@ -88,15 +88,15 @@ void div_reg_bin(void) {
 	*/
 
 	// getBits(start_bit, width)
-	uint32_t Rs = getBits(20, 5);
-	uint32_t Rt = getBits(25, 5);
+	uint32_t Rs = getBits(25, 5);
+	uint32_t Rt = getBits(20, 5);
 
 	setOp("DIV");
 	// setCond_num(cond);
 	// setParam(param_num, param_type, param_value)
 	// ERROR FIX: Registers were originilly swapped. Rs is now the destination register and Rt is the source register.
-	setParam(1, REGISTER, Rs); // destination
-	setParam(2, REGISTER, Rt); // source register operand
+	setParam(1, REGISTER, Rt); // destination
+	setParam(2, REGISTER, Rs); // source register operand
 
 	// tell the system the decoding is done
 	state = COMPLETE_DECODE;

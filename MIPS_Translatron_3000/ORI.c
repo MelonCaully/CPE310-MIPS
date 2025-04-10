@@ -69,14 +69,14 @@ void ori_immd_assm(void) {
 	// Set the opcode
 	setBits_str(31, "001000");
 
-	// set rs
+	// set rt
 	setBits_num(20, PARAM1.value, 5);
 
-	// set rt
+	// set rs
 	setBits_num(25, PARAM2.value, 5);
 
 	// set immediate
-	setBits_num(0, PARAM3.value, 16);
+	setBits_num(15, PARAM3.value, 16);
 
 	// tell the system the encoding is done
 	state = COMPLETE_ENCODE;
@@ -99,9 +99,9 @@ void ori_immd_bin(void) {
 	*/
 
 	// getBits(start_bit, width)
-	uint32_t Rs = getBits(20, 5);	
-	uint32_t Rt = getBits(25, 5);
-	uint32_t imm16 = getBits(0, 16);
+	uint32_t Rs = getBits(25, 5);	
+	uint32_t Rt = getBits(20, 5);
+	uint32_t imm16 = getBits(15, 16);
 
 	/*
 		Setting instruction values
@@ -110,13 +110,22 @@ void ori_immd_bin(void) {
 	setOp("ORI");
 	// setCond_num(cond);
 	// setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rs); // destination
-	setParam(2, REGISTER, Rt); // source register operand
+	setParam(1, REGISTER, Rt); // destination
+	setParam(2, REGISTER, Rs); // source register operand
 	setParam(3, IMMEDIATE, imm16); // immediate value
 
 	// tell the system that the decoding is done
 	state = COMPLETE_DECODE;
 }
 
+/*
+	Enter Binary:
+	> 001101 11001 10000 0000000011111111
+	ORI $s0, $t9, #0xFF
+*/
 
-
+/*
+	Enter a line of assembly:
+	> ORI $s0, $t9, #0xFF
+	001000 11001 10000 0000000011111111 
+*/

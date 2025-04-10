@@ -29,7 +29,7 @@ void mult_reg_assm(void) {
 	// This is MULT register, so param 2 needs to be a register
 	if (PARAM2.type != REGISTER) {
 		state = MISSING_REG;
-		return;
+		return; 
 	}
 
 	/*
@@ -58,10 +58,10 @@ void mult_reg_assm(void) {
 	// Set the funct
 	setBits_str(5, "011000");
 
-	// set rs
+	// set rt
 	setBits_num(20, PARAM1.value, 5);
 
-	// set rt
+	// set rs
 	setBits_num(25, PARAM2.value, 5);
 
 	// tell the system the encoding is done
@@ -85,8 +85,8 @@ void mult_reg_bin(void) {
 	*/
 
 	// getBits(start_bit, width)
-	uint32_t Rs = getBits(20, 5);
-	uint32_t Rt = getBits(25, 5);
+	uint32_t Rs = getBits(25, 5);
+	uint32_t Rt = getBits(20, 5);
 
 	/* 
 		Setting Instuciton values
@@ -95,8 +95,8 @@ void mult_reg_bin(void) {
 	setOp("MULT");
 	// setCond_num(cond);
 	// setParam(param_num, param_type, param_value)
-	setParam(1, REGISTER, Rs); // destination
-	setParam(2, REGISTER, Rt); // source register operand
+	setParam(1, REGISTER, Rt); // destination
+	setParam(2, REGISTER, Rs); // source register operand
 
 	// tell the system the encoding is done
 	state = COMPLETE_DECODE;
@@ -113,5 +113,5 @@ void mult_reg_bin(void) {
 /*
 	Enter a line of assembly:
 	> MULT $t2, $t1
-	000000 01001 01010 00000 00000 011000 
+	000000 01001 01010 00000 00000 011000  
 */

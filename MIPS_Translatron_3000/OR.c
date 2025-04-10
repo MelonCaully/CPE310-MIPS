@@ -123,4 +123,3 @@ void or_reg_bin(void) {
 	state = COMPLETE_DECODE;
 }
 
-
